@@ -1,67 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Prime Wealth Investment | Trusted Investment Partner</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="icon" href="img/268009_smart-light-bulb-icon.svg" type="image/svg+xml">
-  <style>
-    * {
-      box-sizing: border-box;
-    }
-    /* Fade in animation */
-    .fade-in { opacity: 0; transform: translateY(20px); transition: all 1s ease; }
-    .fade-in.show { opacity: 1; transform: translateY(0); }
-
-    /* Market smooth zoom */
-    .market-animate { opacity: 0; transform: scale(0.95); transition: all 1s ease; }
-    .market-animate.show { opacity: 1; transform: scale(1); }
-
-    /* Slide animations */
-    .slide-left { opacity: 0; transform: translateX(-50px); transition: all 0.9s ease; }
-    .slide-right { opacity: 0; transform: translateX(50px); transition: all 0.9s ease; }
-    .slide-left.show, .slide-right.show { opacity: 1; transform: translateX(0); }
-  </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prime Wealth Investment | Trusted Investment Partner</title>
+    <script src="https:                                
+    <link rel="icon" href="img/268009_smart-light-bulb-icon.svg" type="image/svg+xml">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+                               
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 1s ease;
+        }
+        .fade-in.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+                                
+        .market-animate {
+            opacity: 0;
+            transform: scale(0.95);
+            transition: all 1s ease;
+        }
+        .market-animate.show {
+            opacity: 1;
+            transform: scale(1);
+        }
+    </style>
 </head>
 <body class="bg-gray-50 text-gray-800 font-sans overflow-x-hidden">
+    <!-- Header -->
+    <header class="bg-blue-900 text-white shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold tracking-wide">Prime Wealth Investment</div>
+            <nav class="hidden md:flex flex-wrap space-x-4 text-sm">
+                <a href="#register" class="hover:text-teal-300 transition">Register</a>
+                <a href="                                                            
+                <a href="#tools" class="hover:text-teal-300 transition">Tools</a>
+                <a href="                                                                
+                <a href="#funding" class="hover:text-teal-300 transition">Funding</a>
+                <a href="                                                            
+            </nav>
+            <button class="md:hidden text-white" onclick="toggleMenu()">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                </svg>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden hidden px-4 pb-4 space-y-3 bg-blue-900">
+            <a href="#register" class="block text-white hover:text-teal-300">Register</a>
+            <a href="                                                                  
+            <a href="#tools" class="block text-white hover:text-teal-300">Tools</a>
+            <a href="                                                                      
+            <a href="#funding" class="block text-white hover:text-teal-300">Funding</a>
+            <a href="                                                                  
+        </div>
+    </header>
 
-<!-- Header -->
-<header class="bg-blue-900 text-white shadow-md">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex justify-between items-center">
-    <div class="text-2xl font-bold tracking-wide">Prime Wealth Investment</div>
-    <nav class="hidden md:flex space-x-4 text-sm">
-      <a href="#register" class="hover:text-teal-300 transition">Register</a>
-      <a href="#markets" class="hover:text-teal-300 transition">Markets</a>
-      <a href="#tools" class="hover:text-teal-300 transition">Tools</a>
-      <a href="#education" class="hover:text-teal-300 transition">Education</a>
-      <a href="#funding" class="hover:text-teal-300 transition">Funding</a>
-      <a href="#contact" class="hover:text-teal-300 transition">Contact</a>
-    </nav>
-    <button class="md:hidden text-white" onclick="toggleMenu()">
-      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
-      </svg>
-    </button>
-  </div>
-
-  <!-- Mobile Menu -->
-  <div id="mobile-menu" class="md:hidden hidden px-4 pb-4 space-y-3 bg-blue-900">
-    <a href="#register" class="block text-white hover:text-teal-300">Register</a>
-    <a href="#markets" class="block text-white hover:text-teal-300">Markets</a>
-    <a href="#tools" class="block text-white hover:text-teal-300">Tools</a>
-    <a href="#education" class="block text-white hover:text-teal-300">Education</a>
-    <a href="#funding" class="block text-white hover:text-teal-300">Funding</a>
-    <a href="#contact" class="block text-white hover:text-teal-300">Contact</a>
-  </div>
-</header>
-
-<!-- Hero Section -->
-<section class="bg-blue-800 text-white py-12 px-3 text-center">
-  <h1 class="text-xl sm:text-2xl md:text-5xl font-bold mb-4">Invest Smarter With Prime Wealth</h1>
-  <p class="text-sm sm:text-base md:text-lg">Your trusted partner for crypto and financial investments.</p>
-  <button onclick="openSignup()" class="w-full sm:w-auto bg-teal-500 px-4 sm:px-6 py-3 rounded-lg font-semibold hover:bg-teal-600 transition">Get Started</button>
-</section>
+    <!-- Hero Section -->
+    <section class="bg-blue-800 text-white py-12 px-3 text-center">
+        <h1 class="text-xl sm:text-2xl md:text-5xl font-bold mb-4">Invest Smarter With Prime Wealth</h1>
+        <p class="text-sm sm:text-base md:text-lg">Your trusted partner for crypto and financial investments.</p>
+        <button onclick="openSignup()" class="w-full sm:w-auto bg-teal-500 px-4 sm:px-6 py-3 rounded-lg font-semibold hover:bg-teal-600 transition">Get Started</button>
+    </section>
 
 <!-- Signup Modal -->
 <div id="signup-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
@@ -167,44 +173,47 @@
 <!-- Scripts -->
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script>
-  function toggleMenu() {
-    document.getElementById('mobile-menu').classList.toggle('hidden');
-  }
-  function openSignup() {
-    const modal = document.getElementById('signup-modal');
-    modal.classList.remove('hidden');
-    modal.classList.add('flex');
-  }
-  function closeSignup() {
-    const modal = document.getElementById('signup-modal');
-    modal.classList.add('hidden');
-    modal.classList.remove('flex');
-  }
-
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => { if(entry.isIntersecting) entry.target.classList.add('show'); });
-  });
-  document.querySelectorAll(".fade-in, .slide-left, .slide-right, .market-animate").forEach(el => observer.observe(el));
-
-  const ctx = document.getElementById('chart')?.getContext('2d');
-  if(ctx){
-    new Chart(ctx, {
-      type: 'line',
-      data: {
-        labels: ['Mon','Tue','Wed','Thu','Fri'],
-        datasets:[{
-          label:'BTC/USD',
-          data:[42000,43000,41000,44000,45000],
-          borderColor:'#0a3d62',
-          backgroundColor:'rgba(10,61,98,0.1)',
-          tension:0.3,
-          fill:true
-        }]
-      },
-      options: { responsive:true, plugins:{legend:{display:true, position:'top'}}, scales:{y:{beginAtZero:false}} }
-    });
-  }
-</script>
+        function toggleMenu() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        }
+        function openSignup() {
+            const modal = document.getElementById('signup-modal');
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+        }
+        function closeSignup() {
+            const modal = document.getElementById('signup-modal');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+        }
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if(entry.isIntersecting) entry.target.classList.add('show');
+            });
+        });
+        document.querySelectorAll(".fade-in, .market-animate").forEach(el => observer.observe(el));
+        const ctx = document.getElementById('chart')?.getContext('2d');
+        if(ctx){
+            new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: ['Mon','Tue','Wed','Thu','Fri'],
+                    datasets:[{
+                        label:'BTC/USD',
+                        data:[42000,43000,41000,44000,45000],
+                        borderColor:'         
+                        backgroundColor:'rgba(10,61,98,0.1)',
+                        tension:0.3,
+                        fill:true
+                    }]
+                },
+                options: {
+                    responsive:true,
+                    plugins:{legend:{display:true, position:'top'}},
+                    scales:{y:{beginAtZero:false}}
+                }
+            });
+        }
+    </script>
 </body>
 </html>
-
