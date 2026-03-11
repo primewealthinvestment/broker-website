@@ -14,14 +14,14 @@
   <meta property="og:image" content="https://img.freepik.com/premium-photo/arrow-logo-illustration-design-vector-images_959624-72022.jpg">
   <meta property="og:url" content="https://yourdomain.com">
   <meta property="og:type" content="website">
-  <style>
+ <style>
   /* Fade in */
   @keyframes fadeIn {
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
   }
-  .fade-in {
-    opacity: 0;
+  .fade-in { opacity: 0; }
+  .fade-in.animate-visible {
     animation: fadeIn 1s ease forwards;
   }
 
@@ -30,8 +30,8 @@
     from { opacity: 0; transform: translateX(-40px); }
     to { opacity: 1; transform: translateX(0); }
   }
-  .slide-in-left {
-    opacity: 0;
+  .slide-in-left { opacity: 0; }
+  .slide-in-left.animate-visible {
     animation: slideInLeft 1s ease forwards;
   }
 
@@ -40,14 +40,9 @@
     from { opacity: 0; transform: translateX(40px); }
     to { opacity: 1; transform: translateX(0); }
   }
-  .slide-in-right {
-    opacity: 0;
+  .slide-in-right { opacity: 0; }
+  .slide-in-right.animate-visible {
     animation: slideInRight 1s ease forwards;
-  }
-
-  /* Trigger when visible */
-  .animate-visible {
-    opacity: 1 !important;
   }
 </style>
 </head>
@@ -253,6 +248,5 @@ function logout() {
 </script>
 </body>
 </html>
-
 
 
