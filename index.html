@@ -59,7 +59,28 @@
     <p class="text-lg text-blue-100 mb-6">Your trusted partner for crypto and financial investments.</p>
     <button onclick="openSignup()" class="bg-teal-500 px-6 py-3 rounded-lg font-semibold hover:bg-teal-600">Get Started</button>
   </section>
-
+<!-- Signup Modal -->
+<div id="signup-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
+  <div class="bg-white rounded-lg shadow-lg max-w-md w-full p-6 relative mx-4">
+    <button onclick="closeSignup()" class="absolute top-3 right-3 text-gray-500 hover:text-black text-xl">×</button>
+    <h2 class="text-2xl font-semibold text-blue-900 mb-4">Create Your Account</h2>
+    <form class="space-y-4">
+      <div>
+        <label for="name" class="block text-sm font-medium text-gray-700">Full Name</label>
+        <input type="text" id="name" name="name" required class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+      </div>
+      <div>
+        <label for="email" class="block text-sm font-medium text-gray-700">Email Address</label>
+        <input type="email" id="email" name="email" required class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+      </div>
+      <div>
+        <label for="password" class="block text-sm font-medium text-gray-700">Password</label>
+        <input type="password" id="password" name="password" required class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+      </div>
+      <button type="submit" class="w-full bg-blue-600 text-white font-semibold py-2 rounded-lg hover:bg-blue-700 transition">Sign Up</button>
+    </form>
+  </div>
+</div>
   <!-- Navigation -->
   <nav class="flex justify-center gap-4 py-4">
     <a href="index.html" class="px-4 py-2 text-sm bg-blue-600 text-white rounded hover:bg-blue-700">HOME</a>
@@ -218,6 +239,20 @@
       options: { responsive:true, plugins:{legend:{display:true, position:'top'}}, scales:{y:{beginAtZero:false}} }
     });
   </script>
+<script>
+  function openSignup() {
 
+    document.getElementById('signup-modal').classList.remove('hidden');
+
+    document.getElementById('signup-modal').classList.add('flex');
+  }
+  function closeSignup() {
+
+  document.getElementId('signup-modal').classList.add('hidden');
+
+  document.getElementId('signup-modal').classList.remove('flex');
+  }
+</script>
 </body>
 </html>
+
