@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Prime Wealth Investment | Your Vetted & Trusted Investment Partner</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="icon" href="img\268009_smart-light-bulb-icon.svg" type="image/svg+xml">
+<link rel="icon" href="img/268009_smart-light-bulb-icon.svg" type="image/svg+xml">
   <style>
 /* Fade in animation */
 .fade-in {
@@ -93,7 +93,10 @@
       <a href="#contact" class="block text-white hover:text-teal-300">Contact</a>
     </div>
   </header>
-
+  <nav class="flex justify-center gap-4 py-4">
+  <a href="index.html" class="px-4 py-2 text-sm bg-blue-600 text-white rounded hover:bg-blue-700">HOME</a>
+  <a href="login.html" class="px-4 py-2 text-sm bg-green-600 text-white rounded hover:bg-green-700">DASHBOARD</a>
+</nav>
   <script>
     function toggleMenu() {
       const menu = document.getElementById('mobile-menu');
@@ -145,24 +148,18 @@
   </div>
 </div>
 <script>
-  function openSignup() {
+ function closeSignup() {
+  const modal = document.getElementById("signup-modal");
 
-    document.getElementById("signup-modal").classList.remove("hidden");
-  
-    document.getElementById("signup-modal").classList.add("flex");
-  }
+  modal.classList.remove("flex");
+  modal.classList.add("hidden");
+}
 
   function closeSignup() {
 
     document.getElementById("signup-modal").classList.add("hidden");
   }
 </script>
-</body>
-</html>
-<nav class="flex justify-center gap-4 py-4">
-  <a href="index.html" class="px-4 py-2 text-sm bg-blue-600 text-white rounded hover:bg-blue-700">HOME</a>
-  <a href="login.html" class="px-4 py-2 text-sm bg-green-600 text-white rounded hover:bg-green-700">DASHBOARD</a>
-</nav>
 <!-- 📊 Live Market Prices -->
 <section id="markets" class="bg-gray-100 py-12 px-4 md:px-6">
   <div class="max-w-5xl mx-auto">
@@ -173,14 +170,30 @@
           width="100%" height="400" scrolling="auto" frameborder="0"
           class="w-full border-0">
   </iframe>
-</div>
-      <iframe src="https://widget.coinlib.io/widget?type=full_v2&theme=light&cnt=5&pref_coin_id=1505"
-              width="100%" height="400" scrolling="auto" frameborder="0"
-              class="w-full border-0">
-      </iframe>
-    </div>
   </div>
 </section>
+  <script>
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+
+    if (entry.isIntersecting) {
+      entry.target.classList.add("show");
+    }
+
+  });
+});
+
+const elements = document.querySelectorAll(
+  ".fade-in, .slide-left, .slide-right, .market-animate"
+);
+
+elements.forEach((el) => observer.observe(el));
+
+</script>
+</body>
+</html>
+
 <!-- 📈 Trading Tools -->
 <section id="tools" class="bg-white py-12 px-4 md:px-6">
   <div class="max-w-5xl mx-auto">
@@ -308,4 +321,5 @@
     <p class="text-xs mt-4">Trading involves risk. Please read our <a href="#" class="underline text-teal-300">disclaimer</a>.</p>
   </div>
 </footer>
+
 
