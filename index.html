@@ -155,10 +155,6 @@
   modal.classList.add("hidden");
 }
 
-  function closeSignup() {
-
-    document.getElementById("signup-modal").classList.add("hidden");
-  }
 </script>
 <!-- 📊 Live Market Prices -->
 <section id="markets" class="bg-gray-100 py-12 px-4 md:px-6">
@@ -172,25 +168,6 @@
   </iframe>
   </div>
 </section>
-  <script>
-
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-
-    if (entry.isIntersecting) {
-      entry.target.classList.add("show");
-    }
-
-  });
-});
-
-const elements = document.querySelectorAll(
-  ".fade-in, .slide-left, .slide-right, .market-animate"
-);
-
-elements.forEach((el) => observer.observe(el));
-
-</script>
   <script>
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
@@ -207,9 +184,7 @@ const elements = document.querySelectorAll(
 
 elements.forEach((el) => observer.observe(el));
 </script>
-</body>
-</html>
-
+  
 <!-- 📈 Trading Tools -->
 <section id="tools" class="bg-white py-12 px-4 md:px-6 fade-in">
   <div class="max-w-5xl mx-auto">
@@ -222,6 +197,24 @@ elements.forEach((el) => observer.observe(el));
     </div>
   </div>
 </section>
+  <script>
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("show");
+    }
+  });
+});
+
+const elements = document.querySelectorAll(
+  ".fade-in, .slide-left, .slide-right, .market-animate"
+);
+
+elements.forEach((el) => observer.observe(el));
+</script>
+</body>
+</html>
+
 
 <!-- Chart.js Library -->
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -333,6 +326,7 @@ elements.forEach((el) => observer.observe(el));
     <p class="text-xs mt-4">Trading involves risk. Please read our <a href="#" class="underline text-teal-300">disclaimer</a>.</p>
   </div>
 </footer>
+
 
 
 
