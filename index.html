@@ -96,14 +96,14 @@
 ...
 <!-- Market Section -->
 <section id="markets" class="bg-gray-100 py-12 px-3 sm:px-6 md:px-6 market-animate">
-  <div class="max-w-5xl mx-auto overflow-x-hidden">
+  <div class="max-w-5xl mx-auto">
     <h2 class="text-2xl font-semibold text-blue-900 mb-4">📊 Live Market Prices</h2>
     <p class="text-gray-700 mb-6">Track real-time cryptocurrency prices and market trends below:</p>
-    <div class="overflow-x-auto rounded-lg shadow-md">
+    <div class="rounded-lg shadow-md">
       <iframe src="https://widget.coinlib.io/widget?type=full_v2&theme=light&cnt=5&pref_coin_id=1505" 
         class="w-full max-w-full border-0" 
         height="400" 
-        scrolling="auto" 
+        scrolling="no" 
         frameborder="0">
       </iframe>
     </div>
@@ -112,10 +112,10 @@
 
 <!-- Trading Tools -->
 <section id="tools" class="bg-white py-12 px-4 sm:px-6 md:px-6 fade-in">
-  <div class="max-w-5xl mx-auto overflow-x-hidden">
+  <div class="max-w-5xl mx-auto">
     <h2 class="text-2xl font-semibold text-blue-900 mb-4">📈 Interactive Trading Chart</h2>
     <p class="text-gray-700 mb-6">Analyze market trends with our real-time charting tools:</p>
-    <div class="bg-gray-100 p-4 sm:p-6 rounded-lg shadow-md overflow-x-auto">
+    <div class="bg-gray-100 p-4 sm:p-6 rounded-lg shadow-md">
       <canvas id="chart" class="w-full max-w-full h-64 sm:h-80 md:h-96"></canvas>
     </div>
   </div>
@@ -207,3 +207,4 @@
 </script>
 </body>
 </html>
+
