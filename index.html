@@ -6,6 +6,50 @@
   <title>Prime Wealth Investment | Your Vetted & Trusted Investment Partner</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="icon" href="img\268009_smart-light-bulb-icon.svg" type="image/svg+xml">
+  <style>
+/* Fade in animation */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 1s ease;
+}
+
+.fade-in.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Market smooth zoom */
+.market-animate {
+  opacity: 0;
+  transform: scale(0.95);
+  transition: all 1s ease;
+}
+
+.market-animate.show {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Slide animations */
+.slide-left {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: all 0.9s ease;
+}
+
+.slide-right {
+  opacity: 0;
+  transform: translateX(50px);
+  transition: all 0.9s ease;
+}
+
+.slide-left.show,
+.slide-right.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+</style>
 </head>
 <body class="bg-gray-50 text-gray-800 font-sans">
 
@@ -124,7 +168,12 @@
   <div class="max-w-5xl mx-auto">
     <h2 class="text-2xl font-semibold text-blue-900 mb-4">📊 Live Market Prices</h2>
     <p class="text-gray-700 mb-6">Track real-time cryptocurrency prices and market trends below:</p>
-    <div class="rounded-lg overflow-hidden shadow-md">
+<div class="rounded-lg overflow-hidden shadow-md market-animate">
+  <iframe src="https://widget.coinlib.io/widget?type=full_v2&theme=light&cnt=5&pref_coin_id=1505"
+          width="100%" height="400" scrolling="auto" frameborder="0"
+          class="w-full border-0">
+  </iframe>
+</div>
       <iframe src="https://widget.coinlib.io/widget?type=full_v2&theme=light&cnt=5&pref_coin_id=1505"
               width="100%" height="400" scrolling="auto" frameborder="0"
               class="w-full border-0">
@@ -259,3 +308,4 @@
     <p class="text-xs mt-4">Trading involves risk. Please read our <a href="#" class="underline text-teal-300">disclaimer</a>.</p>
   </div>
 </footer>
+
